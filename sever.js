@@ -9,8 +9,7 @@ const cors = require("cors");
 app.use(express.json());
 // Allow specific origins
 const allowedOrigins = [
-    "https://5500-sayanmondal13m-checking-7mbuiv9fzzs.ws-us117.gitpod.io", // Add your frontend origin here
-    "https://your-frontend-production-domain.com", // Replace with your deployed frontend URL
+    "https://5500-sayanmondal13m-checking-7mbuiv9fzzs.ws-us117.gitpod.io",
   ];
   
   const corsOptions = {
