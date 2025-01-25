@@ -5,24 +5,9 @@ const rateLimit = require("express-rate-limit");
 const crypto = require("crypto");
 
 const app = express();
-const cors = require("cors");
+app.use(cors());
 app.use(express.json());
-// Allow specific origins
-const allowedOrigins = [
-    "https://5500-sayanmondal13m-checking-7mbuiv9fzzs.ws-us117.gitpod.io",
-  ];
-  
-  const corsOptions = {
-    origin: (origin, callback) => {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-  };
-  
-  app.use(cors(corsOptions));
+
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://sm187966:uewqZuG2ZRNzl6GO@portfolio.jbu3t.mongodb.net/?retryWrites=true&w=majority&appName=portfolio', {
   useNewUrlParser: true,
